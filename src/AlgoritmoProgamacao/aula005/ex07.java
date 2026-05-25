@@ -1,0 +1,38 @@
+// Gustavo Paulo De Jesus
+
+import java.util.Scanner;
+
+public class ex07 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int contador = 1;
+        int dentroPesoIdeal = 0;
+
+        do {
+            System.out.println("Pessoa " + contador);
+
+            System.out.print("Digite a altura (em metros): ");
+            double altura = sc.nextDouble();
+
+            System.out.print("Digite o peso (em kg): ");
+            double peso = sc.nextDouble();
+
+            double imc = peso / (altura * altura);
+
+            System.out.println("IMC = " + imc);
+
+            if (imc >= 18.5 && imc <= 24.9) {
+                dentroPesoIdeal++;
+            }
+
+            contador++;
+
+        } while (contador <= 10);
+
+        System.out.println("Quantidade de pessoas com IMC entre 18.5 e 24.9: " + dentroPesoIdeal);
+
+        sc.close();
+    }
+}
